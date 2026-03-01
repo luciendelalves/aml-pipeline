@@ -1,4 +1,4 @@
-# AML Pipeline — Detecção de Lavagem de Dinheiro
+# AML Pipeline - Detecção de Lavagem de Dinheiro
 
 Pipeline de engenharia de dados para processamento e classificação de transações financeiras suspeitas, aplicando a arquitetura Medallion (Bronze → Silver → Gold) com Python e PostgreSQL.
 
@@ -31,9 +31,9 @@ O Compliance trabalha de manhã. Não é necessário dado em tempo real, basta g
 
 ## Dataset
 
-IBM Transactions for Anti Money Laundering (AML) — NeurIPS 2023  
+IBM Transactions for Anti Money Laundering (AML) - NeurIPS 2023  
 Fonte: [Kaggle](https://www.kaggle.com/datasets/ealtman2019/ibm-transactions-for-anti-money-laundering-aml)  
-Arquivo utilizado: `HI-Small_Trans.csv` — 1.048.575 transações
+Arquivo utilizado: `HI-Small_Trans.csv` - 1.048.575 transações
 
 | Coluna | Descrição |
 |---|---|
@@ -107,7 +107,7 @@ Cada transação recebe um `risk_score` baseado em três sinais:
 
 ## Descobertas Analíticas
 
-Os sinais de risco foram calibrados com base nos próprios dados — e contrariaram o senso comum de PLD:
+Os sinais de risco foram calibrados com base nos próprios dados - e contrariaram o senso comum de PLD:
 
 **Canal de pagamento:** Wire e Cash, tradicionalmente considerados de alto risco, têm zero lavagem confirmada neste dataset. O canal ACH concentra 83% dos casos. Criminosos se ocultam no alto volume de transações legítimas.
 
