@@ -184,6 +184,6 @@ Os sinais de risco foram calibrados com base nos próprios dados e contrariaram 
 
 ## Autor
 
-Luciendel Alves
-Analista de Risco e PLD
+Luciendel Alves  
+Analista de Risco e PLD  
 LinkedIn: https://www.linkedin.com/in/luciendelalves
