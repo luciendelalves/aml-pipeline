@@ -33,8 +33,6 @@ Arquivo utilizado: `HI-Small_Trans.csv` com 1.048.575 transações.
 
 ![Arquitetura do Pipeline](architecture.svg)
 
-```
-
 **Por que batch e não streaming?**
 O Compliance trabalha de manhã. Não é necessário dado em tempo real. Basta garantir que os dados estejam prontos e classificados antes do início do expediente, o que torna o processamento batch a escolha mais simples e adequada.
 
@@ -49,7 +47,7 @@ O volume do dataset (1 milhão de transações) cabe confortavelmente em um banc
 O pipeline tem uma sequência linear de três etapas sem dependências externas ou schedules complexos. Adicionar Airflow nesse contexto seria over-engineering. O orquestrador certo para esse caso é um cron job ou um script único de execução sequencial.
 
 **Por que Medallion Architecture?**
-Separar Bronze, Silver e Gold garante rastreabilidade. Se uma transformação produzir dados errados, é possível reprocessar a partir da camada anterior sem precisar reingesta os dados brutos. Em compliance isso é fundamental.
+Separar Bronze, Silver e Gold garante rastreabilidade. Se uma transformação produzir dados errados, é possível reprocessar a partir da camada anterior sem precisar reingestar os dados brutos. Em compliance isso é fundamental.
 
 ---
 
@@ -187,5 +185,5 @@ Os sinais de risco foram calibrados com base nos próprios dados e contrariaram 
 ## Autor
 
 Luciendel Alves
-Analista de Risco e PLD 
+Analista de Risco e PLD
 LinkedIn: https://www.linkedin.com/in/luciendelalves
