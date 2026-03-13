@@ -31,7 +31,7 @@ Arquivo utilizado: `HI-Small_Trans.csv` com 1.048.575 transações.
 
 ## Arquitetura
 
-> Diagrama visual disponível em breve (Excalidraw).
+![Arquitetura do Pipeline](architecture.svg)
 
 ```
 CSV (IBM AML Dataset)

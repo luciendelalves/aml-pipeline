@@ -1,0 +1,59 @@
+<svg width="600" height="520" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="600" height="520" fill="#1a1a2e" rx="12"/>
+
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">AML Pipeline - Arquitetura</text>
+
+  <!-- Step 1: CSV -->
+  <rect x="200" y="65" width="200" height="50" rx="8" fill="#2d2d5e" stroke="#6c63ff" stroke-width="1.5"/>
+  <text x="300" y="85" text-anchor="middle" fill="#a0a0ff" font-size="11" font-weight="bold">FONTE DE DADOS</text>
+  <text x="300" y="103" text-anchor="middle" fill="#ffffff" font-size="12">IBM AML Dataset (CSV)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="300" y1="115" x2="300" y2="140" stroke="#6c63ff" stroke-width="1.5"/>
+  <polygon points="294,138 300,150 306,138" fill="#6c63ff"/>
+
+  <!-- Step 2: Bronze -->
+  <rect x="150" y="150" width="300" height="60" rx="8" fill="#3d2000" stroke="#cd7f32" stroke-width="1.5"/>
+  <text x="300" y="172" text-anchor="middle" fill="#cd7f32" font-size="11" font-weight="bold">BRONZE (raw)</text>
+  <text x="300" y="190" text-anchor="middle" fill="#ffffff" font-size="11">Dado bruto, sem transformação</text>
+  <text x="300" y="204" text-anchor="middle" fill="#aaaaaa" font-size="10">01_load_bronze.py</text>
+
+  <!-- Arrow 2 -->
+  <line x1="300" y1="210" x2="300" y2="235" stroke="#6c63ff" stroke-width="1.5"/>
+  <polygon points="294,233 300,245 306,233" fill="#6c63ff"/>
+
+  <!-- Step 3: Silver -->
+  <rect x="150" y="245" width="300" height="60" rx="8" fill="#1a2e1a" stroke="#c0c0c0" stroke-width="1.5"/>
+  <text x="300" y="267" text-anchor="middle" fill="#c0c0c0" font-size="11" font-weight="bold">SILVER (staging)</text>
+  <text x="300" y="285" text-anchor="middle" fill="#ffffff" font-size="11">Limpeza, tipagem, padronização</text>
+  <text x="300" y="299" text-anchor="middle" fill="#aaaaaa" font-size="10">02_transform_silver.py</text>
+
+  <!-- Arrow 3 -->
+  <line x1="300" y1="305" x2="300" y2="330" stroke="#6c63ff" stroke-width="1.5"/>
+  <polygon points="294,328 300,340 306,328" fill="#6c63ff"/>
+
+  <!-- Step 4: Gold -->
+  <rect x="150" y="340" width="300" height="60" rx="8" fill="#2e2a00" stroke="#ffd700" stroke-width="1.5"/>
+  <text x="300" y="362" text-anchor="middle" fill="#ffd700" font-size="11" font-weight="bold">GOLD (analytics)</text>
+  <text x="300" y="380" text-anchor="middle" fill="#ffffff" font-size="11">Classificacao de risco (risk_score)</text>
+  <text x="300" y="394" text-anchor="middle" fill="#aaaaaa" font-size="10">03_transform_gold.py</text>
+
+  <!-- Arrow 4 -->
+  <line x1="300" y1="400" x2="300" y2="425" stroke="#6c63ff" stroke-width="1.5"/>
+  <polygon points="294,423 300,435 306,423" fill="#6c63ff"/>
+
+  <!-- Step 5: Analytics -->
+  <rect x="150" y="435" width="300" height="50" rx="8" fill="#1a1a3e" stroke="#4fc3f7" stroke-width="1.5"/>
+  <text x="300" y="455" text-anchor="middle" fill="#4fc3f7" font-size="11" font-weight="bold">CONSULTAS ANALITICAS</text>
+  <text x="300" y="473" text-anchor="middle" fill="#ffffff" font-size="11">PostgreSQL - analises.sql</text>
+
+  <!-- Stack info -->
+  <text x="30" y="460" fill="#888888" font-size="10">Stack:</text>
+  <text x="30" y="474" fill="#888888" font-size="10">Python 3.13</text>
+  <text x="30" y="488" fill="#888888" font-size="10">PostgreSQL 15</text>
+  <text x="30" y="502" fill="#888888" font-size="10">Docker</text>
+
+</svg>
