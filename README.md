@@ -34,23 +34,6 @@ Arquivo utilizado: `HI-Small_Trans.csv` com 1.048.575 transações.
 ![Arquitetura do Pipeline](architecture.svg)
 
 ```
-CSV (IBM AML Dataset)
-        |
-        v
-    Bronze (raw)
-    dado bruto, sem transformação
-        |
-        v
-    Silver (staging)
-    limpeza, tipagem, padronização
-        |
-        v
-    Gold (analytics)
-    classificação de risco por transação
-        |
-        v
-    Consultas SQL (analises.sql)
-```
 
 **Por que batch e não streaming?**
 O Compliance trabalha de manhã. Não é necessário dado em tempo real. Basta garantir que os dados estejam prontos e classificados antes do início do expediente, o que torna o processamento batch a escolha mais simples e adequada.
